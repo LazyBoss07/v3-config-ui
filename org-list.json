@@ -1,0 +1,18 @@
+[
+  {
+    "ORG_ID": 1000000000245,
+    "ORG_NAME": "Default"
+  },
+  {
+    "ORG_ID": 2000000000246,
+    "ORG_NAME": "Zoho Corporation"
+  },
+  {
+    "ORG_ID": 1000000000246,
+    "ORG_NAME": "MyNewOrg"
+  },
+  {
+    "ORG_ID": 1000000000247,
+    "ORG_NAME": "MyNewOrg2"
+  }
+]

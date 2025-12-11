@@ -1,0 +1,74 @@
+{
+  "1000000000245": {
+    "isDefault": true,
+    "enabledFeatures": [
+      "2",
+      "5",
+      "6",
+      "9",
+      "10",
+      "11"
+    ],
+    "includeCrawledURLCountInResponse": false,
+    "throttleTimeInterval": "1D",
+    "whiteListedDomains": [
+      "help.zoho.com",
+      "docs.catalyst.zoho.com",
+      "blogs.manageengine.com",
+      "www.manageengine.com",
+      "blog.zoho.com"
+    ],
+    "throttleRequestCount": 50,
+    "maxDepthAllowed": -1,
+    "maxPagesToFetchAllowed": 20000,
+    "maxAsyncResponseRate": 100,
+    "requestPriority": 5,
+    "isDynamicCrawlingAllowed": true,
+    "enabledCrawlerFields": [
+      "Html",
+      "OutGoingURLs",
+      "Markdown"
+    ],
+    "additionalQueryParams": [
+      "requestId",
+      "recordId",
+      "seedStatus",
+      "recordStatus"
+    ]
+  },
+  "2000000000246": {
+    "enabledFeatures": [
+      "2",
+      "5",
+      "6",
+      "9",
+      "10",
+      "11"
+    ],
+    "includeCrawledURLCountInResponse": false,
+    "throttleTimeInterval": "1D",
+    "whiteListedDomains": [
+      "docs.catalyst.zoho.com",
+      "blogs.manageengine.com",
+      "www.manageengine.com",
+      "blog.zoho.com"
+    ],
+    "throttleRequestCount": 50,
+    "maxDepthAllowed": -1,
+    "maxPagesToFetchAllowed": 20000,
+    "maxAsyncResponseRate": 100,
+    "requestPriority": 5,
+    "isDynamicCrawlingAllowed": true,
+    "enabledCrawlerFields": [
+      "Html",
+      "OutGoingURLs",
+      "Markdown"
+    ],
+    "additionalQueryParams": [
+      "requestId",
+      "recordId",
+      "seedStatus",
+      "recordStatus"
+    ]
+  }
+}
