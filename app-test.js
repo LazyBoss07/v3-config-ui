@@ -23,7 +23,8 @@ app.use(
         allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Origin', 'Accept']
     })
 );
-app.options('*', cors());
+// Handle CORS preflight specifically for the crawler endpoint
+app.options('/caas/servlet/CrawlerServiceAdminServlet', cors());
 // Request logging middleware (logs method, path, ip, and short body)
 app.use((req, res, next) => {
     const shortBody = req.body && Object.keys(req.body).length ? {
