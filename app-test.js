@@ -11,6 +11,15 @@ const __dirname = path.dirname(__filename);
 const upload = multer();
 const app = express();
 
+// CORS middleware: allow all origins and common headers
+app.use(
+    cors({
+        origin: '*',
+        methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+        allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Origin', 'Accept']
+    })
+);
+app.options('*', cors());
 // Request logging middleware (logs method, path, ip, and short body)
 app.use((req, res, next) => {
     const shortBody = req.body && Object.keys(req.body).length ? {
@@ -20,8 +29,7 @@ app.use((req, res, next) => {
     logInfo('Incoming request', { method: req.method, path: req.path, ip: req.ip, body: shortBody });
     next();
 });
-// CORS middleware: allow all origins
-app.use(cors({ origin: '*', methods: 'GET,POST,PUT,PATCH,DELETE,OPTIONS' }));
+
 
 // Simple health-check endpoint
 app.get('/health', (req, res) => {
