@@ -115,15 +115,13 @@ const DEFAULT_CONFIG = {
 // Single entrypoint: POST /api/v2/crawler (form-data)
 // --------------------------------------------------
 app.post('/caas/servlet/CrawlerServiceAdminServlet', upload.none(), (req, res) => {
-    const { action } = req.body || {};
+    const action = (req.body && req.body.action) || (req.query && req.query.action);
 
     if (!action) {
         return res.status(400).json({ message: 'Missing action parameter', status: 'error' });
     }
 
     switch (action) {
-        // 1.1 Get All Organizations
-        // POST /api/v2/crawler?action=getAllOrg
         case 'getAllOrg': {
             let orgs = readJson(ORG_FILE);
             if (!Array.isArray(orgs)) orgs = [];
