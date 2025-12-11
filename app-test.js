@@ -11,6 +11,10 @@ const __dirname = path.dirname(__filename);
 const upload = multer();
 const app = express();
 
+// Body parsers for form-data and JSON
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 // CORS middleware: allow all origins and common headers
 app.use(
     cors({
