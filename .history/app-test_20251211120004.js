@@ -98,7 +98,7 @@ const DEFAULT_CONFIG = {
 // --------------------------------------------------
 // Single entrypoint: POST /api/v2/crawler (form-data)
 // --------------------------------------------------
-app.post('/caas/servlet/CrawlerServiceAdminServlet', upload.none(), (req, res) => {
+app.post('caas/servlet/CrawlerServiceAdminServlet', upload.none(), (req, res) => {
     const { action } = req.body || {};
 
     if (!action) {
