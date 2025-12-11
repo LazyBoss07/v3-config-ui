@@ -21,7 +21,8 @@ app.use((req, res, next) => {
     next();
 });
 // CORS middleware: allow all origins
-app.use(cors);
+    app.use(cors());
+
 // Simple health-check endpoint
 app.get('/health', (req, res) => {
     return res.status(200).json({ status: 'ok' });
